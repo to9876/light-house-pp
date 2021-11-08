@@ -1,0 +1,11 @@
+// メディアクエリ
+
+$set-breakpoints: (
+  md: 961px,
+  );
+
+@mixin min-mq($breakpoint: md) {
+  @media screen and (min-width: #{map-get($set-breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
